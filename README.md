@@ -1,2 +1,2 @@
 # probe_station
-NUST MIPT Probe station automation
+NUST MISIS Probe station automation
