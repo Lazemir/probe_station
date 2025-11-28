@@ -36,13 +36,13 @@ class Keithley2400(Keithley2400Base):
 
         # Parameter to select front or rear panel input/output terminals
         # val_mapping allows pythonic inputs 'front'/'rear' to map to SCPI 'FRONt'/'REAR'
-        self.add_parameter(
-            'route_terminals',
+        self.terminals = self.add_parameter(
+            'terminals',
             label='Input/Output Terminals',
             parameter_class=Parameter,
             docstring='Select front or rear panel input/output jacks.',
             get_cmd=':ROUTe:TERMinals?',
-            set_cmd=':ROUTe:TERMinals {value}',
+            set_cmd=':ROUTe:TERMinals {}',
             vals=Enum('front', 'rear'),
             val_mapping={
                 'front': 'FRONt',
