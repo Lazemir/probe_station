@@ -1,0 +1,23 @@
+﻿[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "probe-station"
+version = "0.1.0"
+description = "NUST MISIS probe station automation"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Probe Station Team" }
+]
+dependencies = [
+    "numpy>=1.24",
+    "qcodes>=0.44"
+]
+
+[tool.setuptools]
+packages = [
+    "instruments",
+    "instrument_drivers"
+]
